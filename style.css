@@ -43,7 +43,6 @@ p {
     color: rgb(70, 69, 69);
     padding: 1em 0 0;
 }
-
 button {
     outline: none;
     cursor: pointer;
@@ -65,7 +64,7 @@ button:hover {
 
 .container {
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 .logo {
@@ -112,14 +111,62 @@ button:hover {
     display: flex;
     width: 100%;
     height: 100%;
+    /* height: calc(100vh - 80px); */
     justify-content: center;
     align-items: center;
-    padding: 10% 10% 0;
+    padding: 0 10%;
     overflow: hidden;
+}
+.wrapper::before{
+    position: absolute;
+    content: '';
+    height: 300px;
+    width: 600px;
+    border-radius: 50%;
+    left: -25%;
+    top: 42%;
+    background: linear-gradient(20deg,rgb(144, 219, 254),rgb(145, 254, 144),rgb(254, 144, 144));
+    animation: object1 18s linear infinite;
+}
+.wrapper::after{
+    position: absolute;
+    content: '';
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    left: 45%;
+    top: 75%;
+    background: linear-gradient(100deg,rgb(144, 219, 254),rgb(254, 144, 144),rgb(145, 254, 144));
+    animation: object2 16s linear infinite;
+}
+
+@keyframes object1 {
+    50%{
+        left: 35%;
+        top: 60%;
+        width: 10%;
+        height: 40%;
+    }
+    
+}
+@keyframes object2 {
+    50%{
+        left: 55%;
+        top: 10%;
+        width: 20%;
+        height: 40%;
+    }
+    
 }
 
 .cols {
     width: 50%;
+}
+.cols0{
+    z-index: 5;
+    height: 100vh;
+    padding-top: 18%;
+    width: 150%;
 }
 
 .topline {
@@ -157,42 +204,43 @@ button:hover {
 
 .imgbox img {
     position: relative;
-    height: 100%;
-    width: calc(130% - 200px);
-    top: 50px;
-    left: 200px;
+    height: 200%;
+    width: 200%;
+    top: 150px;
+    left: -150px;
+    z-index: 8;
     animation: animateUser 5s linear infinite;
 }
 
 @keyframes animateUser {
     50% {
-        left: 180px;
-        top: 90px;
+        left: -140px;
+        top: 160px;
     }
 }
 
 .imgbox #splash {
     position: absolute;
-    height: 40%;
-    width: 40%;
-    top: 100%;
-    left: -145%;
+    height: 100%;
+    width: 100%;
+    top:130%;
+    left: -360%;
     filter: saturate(150%);
-    animation: animate 15s linear infinite;
+    animation: animate 25s linear infinite;
 }
 
 @keyframes animate {
     50% {
-        top: 65%;
-        left: -125%;
+        top: 40%;
+        left: -360%;
     }
 }
 
 @media screen and (max-width: 1000px){
-     nav { 
+     .logo { 
        display:none;
      }
-     .imgbox #splash{
+     .imgbox{
         display: none;
      }
    }
