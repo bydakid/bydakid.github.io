@@ -67,15 +67,7 @@ button:hover {
     height: 100vh;
 }
 
-.logo {
-    display: flex;
-    font-size: 80px;
-    font-weight: 600;
-    color: rgb(70, 69, 69);
-    letter-spacing: 10px;
-    cursor: pointer;
-    font-family: 'Space Mono', monospace;
-}
+
 
 .navItems {
     display: flex;
@@ -87,7 +79,7 @@ button:hover {
 }
 
 .navItems li a {
-    font-size: 20px;
+    font-size: 40px;
     color: rgb(70, 69, 69);
     letter-spacing: 3px;
     text-decoration: none;
@@ -98,7 +90,7 @@ button:hover {
 }
 
 .links a {
-    font-size: 20px;
+    font-size: 30px;
     color: rgb(70, 69, 69);
     margin: 20px 10px;
 }
@@ -237,13 +229,15 @@ button:hover {
 }
 
 @media screen and (max-width: 1000px){
-     .logo { 
-       display:none;
-     }
      .imgbox{
         display: none;
      }
+     nav{
+        display: grid;
+        padding: 5% 0 20%;
+     }
      .links{
-        display: none;
+        text-align: center;
+        font-size: 40%;
      }
    }
