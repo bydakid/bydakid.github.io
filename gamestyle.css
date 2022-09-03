@@ -1,0 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    /* background: url(neon-future-game-pad-background-vector-35068740.jpeg) no-repeat center center fixed; */
+    background-size: cover;
+}
