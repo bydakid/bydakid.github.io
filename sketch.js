@@ -33,7 +33,7 @@ function setup() {
   vis.add(new Spectrum());
   vis.add(new RedPill());
   vis.add(new Matrix());
-  vis.add(new Art());
+  vis.add(new Art()); 
 
   noiseStep = 0.01;
   prog = 0;
