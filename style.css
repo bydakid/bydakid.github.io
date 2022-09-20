@@ -267,6 +267,16 @@ button:hover {
         animation: animateUser 5s linear infinite;
     }
 
+    nav{
+        display: inline;
+    }
+
+    .navItems{
+        padding-top: 5%;
+        padding-left: 0rem !important;
+    }
+    
+
 }
 
 @keyframes animateUser {
